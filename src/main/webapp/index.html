@@ -1,10 +1,206 @@
-<!DOCTYPE html>
-<html>
+<doctype! html>
 <head>
-<meta charset="UTF-8">
-<title>Insert title here</title>
+	<title>Animal Shelter</title>
+	<link rel="stylesheet" href="main.css">
+	<link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Lora">
+    <script type="text/javascript" src="script.js"></script>
 </head>
+
 <body>
-<h1>Hello World!</h1>
+	<center>
+		<div id="animals-btns" onclick="showModal('op-btns')">
+			<h1 class="animal-heading">Pick an Animal!</h1>
+			<input type="image" class="dog-btn" src="http://www.stickpng.com/assets/images/580b57fbd9996e24bc43bbd5.png" alt="dog">
+			<input type="image" class="cat-btn" src="http://www.stickpng.com/assets/images/580b57fbd9996e24bc43bb97.png" alt="cat">
+		</div>
+
+		<div id="op-btns" style="display:none;">
+			<h1 class="op-heading">What do you want to do?</h1>
+			<button type="button" id="find-btn" for="find-form" onclick="showModal('find-form')">Find Animal</button>
+			<button type="button" id="add-btn" for="add-form" onclick="showModal('add-form')">Add Animal</button>
+			<button type="button" id="delete-btn" for="delete-form" onclick="showModal('delete-form')">Delete Animal</button>
+			<button type="button" id="update-btn" for="update-form" onclick="showModal('update-form')">Update Animal</button>
+		</div>
+
+		<div id="find-form" style="display:none;">
+			<form>
+				<label for="outcome-type">Outcome Type</label>
+				<input list="outcome-type" placeholder="Euthanasia" type="text"/>
+				<datalist id="outcome-type-list">
+					<option class="outcome-type-options">
+				</datalist>
+				<br><br>
+
+				<label for="subtype">Subtype</label>
+				<input list="subtype" placeholder="Foster" type="text"/>
+				<datalist id="subtype-list">
+					<option class="subtype-options">
+				</datalist>
+				<br><br>
+
+				<label for="sex">Sex</label>
+				<input list="sex" placeholder="Neutered Male" type="text"/>
+				<datalist id="sex-list">
+					<option class="sex-options">
+				</datalist>
+				<br><br>
+
+				<label for="age">Age</label>
+				<input list="age" placeholder="1 year" type="text"/>
+				<datalist id="age-list">
+					<option class="age-options">
+				</datalist>
+				<br><br>
+
+				<label for="breed">Breed</label>
+				<input list="breed" placeholder="Shetland Sheepdog Mix" type="text"/>
+				<datalist id="breed-list">
+					<option class="breed-options">
+				</datalist>
+				<br><br>
+
+				<label for="color">Color</label>
+				<input list="color" placeholder="Brown/White" type="text"/>
+				<datalist id="color-list">
+					<option class="color-options">
+				</datalist>
+				<br>
+			</form>
+		</div>
+
+		<div id="add-form" style="display:none;"> 
+			<form>
+				<label for="name">Name</label>
+				<input id="name" placeholder="Hambone" type="text"/>
+				<br><br>
+
+				<label for="date">Date</label>
+				<input id="date" placeholder="2/12/14" type="date"/>
+				<br><br>
+
+				<label for="time">Time</label>
+				<input id="time" placeholder="18:22" type="time"/>
+				<br><br>
+
+				<label for="outcome-type">Outcome Type</label>
+				<input list="outcome-type" placeholder="Euthanasia" type="text"/>
+				<datalist id="outcome-type-list">
+					<option class="outcome-type-options">
+				</datalist>
+				<br><br>
+
+				<label for="subtype">Subtype</label>
+				<input list="subtype" placeholder="Foster" type="text"/>
+				<datalist id="subtype-list">
+					<option class="subtype-options">
+				</datalist>
+				<br><br>
+
+				<label for="sex">Sex</label>
+				<input list="sex" placeholder="Neutered Male" type="text"/>
+				<datalist id="sex-list">
+					<option class="sex-options">
+				</datalist>
+				<br><br>
+
+				<label for="age">Age</label>
+				<input list="age" placeholder="1 year" type="text"/>
+				<datalist id="age-list">
+					<option class="age-options">
+				</datalist>
+				<br><br>
+
+				<label for="breed">Breed</label>
+				<input list="breed" placeholder="Shetland Sheepdog Mix" type="text"/>
+				<datalist id="breed-list">
+					<option class="breed-options">
+				</datalist>
+				<br><br>
+
+				<label for="color">Color</label>
+				<input list="color" placeholder="Brown/White" type="text"/>
+				<datalist id="color-list">
+					<option class="color-options">
+				</datalist>
+				<br>
+			</form>
+		</div>
+
+		<div id="delete-form" style="display:none;">
+			<form>
+				<label for="animal-id">Animal ID</label>
+				<input list="animal-id" placeholder="A671945" type="text"/>
+				<datalist id="animal-id-list">
+					<option class="animal-id-options">
+				</datalist>
+				<br>
+			</form>
+		</div>
+
+		<div id="update-form" style="display:none;"> 
+			<form>
+				<label for="animal-id">Animal ID</label>
+				<input list="animal-id" placeholder="A671945" type="text"/>
+				<datalist id="animal-id-list">
+					<option class="animal-id-options">
+				</datalist>
+				<br><br>
+
+				<label for="name">Name</label>
+				<input id="name" placeholder="Hambone" type="text"/>
+				<br><br>
+
+				<label for="date">Date</label>
+				<input id="date" placeholder="2/12/14" type="date"/>
+				<br><br>
+
+				<label for="time">Time</label>
+				<input id="time" placeholder="18:22" type="time"/>
+				<br><br>
+
+				<label for="outcome-type">Outcome Type</label>
+				<input list="outcome-type" placeholder="Euthanasia" type="text"/>
+				<datalist id="outcome-type-list">
+					<option class="outcome-type-options">
+				</datalist>
+				<br><br>
+
+				<label for="subtype">Subtype</label>
+				<input list="subtype" placeholder="Foster" type="text"/>
+				<datalist id="subtype-list">
+					<option class="subtype-options">
+				</datalist>
+				<br><br>
+
+				<label for="sex">Sex</label>
+				<input list="sex" placeholder="Neutered Male" type="text"/>
+				<datalist id="sex-list">
+					<option class="sex-options">
+				</datalist>
+				<br><br>
+
+				<label for="age">Age</label>
+				<input list="age" placeholder="1 year" type="text"/>
+				<datalist id="age-list">
+					<option class="age-options">
+				</datalist>
+				<br><br>
+
+				<label for="breed">Breed</label>
+				<input list="breed" placeholder="Shetland Sheepdog Mix" type="text"/>
+				<datalist id="breed-list">
+					<option class="breed-options">
+				</datalist>
+				<br><br>
+
+				<label for="color">Color</label>
+				<input list="color" placeholder="Brown/White" type="text"/>
+				<datalist id="color-list">
+					<option class="color-options">
+				</datalist>
+				<br>
+			</form>
+		</div>
+	</center>
 </body>
-</html>
